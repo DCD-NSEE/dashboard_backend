@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "dashboard-backend"
+version = "0.1.0"
+description = ""
+authors = ["do-ald533 <douglas.aldred533@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.112.0"}
+sqlmodel = "^0.0.21"
+
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.27.0"
+
+[tool.poe.tasks]
+dev         = "fastapi run src/main.py"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
